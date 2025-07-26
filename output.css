@@ -1,0 +1,106 @@
+/* style.css for BizPlanner - index page */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: #1a1a1a;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  animation: fadeIn 1s ease-out;
+}
+
+.brand {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.2rem;
+  color: #f1c40f;
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 8px #f1c40f; }
+  to { text-shadow: 0 0 16px #f1c40f; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: #f1c40f;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: none;
+  background: #2d2d2d;
+  color: white;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btn {
+  background: #f1c40f;
+  color: #000;
+  padding: 0.9rem 2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #d4ac0d;
+}
+
+.footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 95%;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+    margin: 2rem auto;
+    padding: 1.2rem;
+  }
+
+  .brand {
+    font-size: 1.6rem;
+  }
+}

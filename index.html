@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BizPlanner</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <div class="brand">📈 BizPlanner</div>
+
+    <form>
+      <div class="form-group">
+        <label for="budget">Your Investment (₹)</label>
+        <input type="number" id="budget" placeholder="e.g. 1000000" required />
+      </div>
+
+      <div class="form-group">
+        <label for="business-type">Business Type</label>
+        <select id="business-type" required>
+          <option value="bakery">Bakery</option>
+          <option value="cafe">Cafe</option>
+          <option value="gym">Gym</option>
+          <!-- Add more -->
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="city">Select City</label>
+        <select id="city" required>
+          <option value="ahmedabad">Ahmedabad</option>
+          <option value="surat">Surat</option>
+          <!-- Add more -->
+        </select>
+      </div>
+
+      <button type="submit" class="btn">Generate Plan</button>
+    </form>
+    <div class="info-section">
+  <h2>📘 How BizPlanner Works</h2>
+  <p>BizPlanner helps aspiring entrepreneurs understand how to allocate their investment wisely based on the city and business type. We use real-world approximations to generate your budget breakdown and estimate breakeven sales needed for success.</p>
+
+  <h2>📊 Budget Categories</h2>
+  <ul>
+    <li><strong>🏢 Rent:</strong> Cost of commercial property per sq ft.</li>
+    <li><strong>💼 Salaries:</strong> Staff payments (chefs, managers, helpers).</li>
+    <li><strong>🛠 Equipment:</strong> Furniture, tools, tech & setup items.</li>
+    <li><strong>📢 Marketing:</strong> Social media, banners, local ads, promotions.</li>
+    <li><strong>📄 Legal:</strong> Licenses like FSSAI/GST, consultancy.</li>
+    <li><strong>⚙ Miscellaneous:</strong> Maintenance, software, packaging, internet, etc.</li>
+  </ul>
+
+  <h2>📍 Smart City-Based Planning</h2>
+  <p>The breakdown adapts to your selected city. For example, a 5-star hotel might perform well in Ahmedabad but may not suit Kapadwanj. Our AI provides an insight on the business potential based on city-business compatibility.</p>
+</div>
+
+
+    <footer class="footer">
+      <p>© Created by Rudra Patel, Student of SPEC</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
