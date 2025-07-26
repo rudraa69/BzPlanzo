@@ -3,18 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BizPlanner- Let Us Help</title>
+  <title>BizPlanner - Business Budget Tool</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
     <div class="brand">📈 BizPlanner</div>
+    <div class="section">
+      <h2>🚀 Start Your Plan</h2>
+      <p>Enter your total budget, select a business type, and pick your target city in Gujarat. We'll break down your cost structure and calculate your breakeven point instantly.</p>
+    </div>
 
-    <form>
+    <form id="plannerForm">
       <div class="form-group">
         <label for="budget">Your Investment (₹)</label>
-        <input type="number" id="budget" placeholder="e.g. 1000000" required />
+        <input type="number" id="budget" placeholder="e.g. 1000000" required>
       </div>
 
       <div class="form-group">
@@ -23,7 +27,15 @@
           <option value="bakery">Bakery</option>
           <option value="cafe">Cafe</option>
           <option value="gym">Gym</option>
-          <!-- Add more -->
+          <option value="saloon">Saloon</option>
+          <option value="realestate">Real Estate Office</option>
+          <option value="cloudkitchen">Cloud Kitchen</option>
+          <option value="coaching">Coaching Class</option>
+          <option value="medical">Medical Store</option>
+          <option value="clothing">Clothing Store</option>
+          <option value="stationery">Stationery Shop</option>
+          <option value="mobile">Mobile Store</option>
+          <option value="electronics">Electronics Repair</option>
         </select>
       </div>
 
@@ -32,34 +44,25 @@
         <select id="city" required>
           <option value="ahmedabad">Ahmedabad</option>
           <option value="surat">Surat</option>
-          <!-- Add more -->
+          <option value="vadodara">Vadodara</option>
+          <option value="rajkot">Rajkot</option>
+          <option value="anand">Anand</option>
+          <option value="nadiad">Nadiad</option>
+          <option value="kapadwanj">Kapadwanj</option>
+          <option value="bhavnagar">Bhavnagar</option>
+          <option value="junagadh">Junagadh</option>
+          <option value="mehsana">Mehsana</option>
+          <option value="navsari">Navsari</option>
+          <option value="bharuch">Bharuch</option>
+          <option value="jamnagar">Jamnagar</option>
+          <option value="valsad">Valsad</option>
         </select>
       </div>
 
-      <button type="submit" class="btn">Generate Plan</button>
+      <button type="submit" class="btn">Generate Report</button>
     </form>
-    <div class="info-section">
-  <h2>📘 How BizPlanner Works</h2>
-  <p>BizPlanner helps aspiring entrepreneurs understand how to allocate their investment wisely based on the city and business type. We use real-world approximations to generate your budget breakdown and estimate breakeven sales needed for success.</p>
 
-  <h2>📊 Budget Categories</h2>
-  <ul>
-    <li><strong>🏢 Rent:</strong> Cost of commercial property per sq ft.</li>
-    <li><strong>💼 Salaries:</strong> Staff payments (chefs, managers, helpers).</li>
-    <li><strong>🛠 Equipment:</strong> Furniture, tools, tech & setup items.</li>
-    <li><strong>📢 Marketing:</strong> Social media, banners, local ads, promotions.</li>
-    <li><strong>📄 Legal:</strong> Licenses like FSSAI/GST, consultancy.</li>
-    <li><strong>⚙ Miscellaneous:</strong> Maintenance, software, packaging, internet, etc.</li>
-  </ul>
-
-  <h2>📍 Smart City-Based Planning</h2>
-  <p>The breakdown adapts to your selected city. For example, a 5-star hotel might perform well in Ahmedabad but may not suit Kapadwanj. Our AI provides an insight on the business potential based on city-business compatibility.</p>
-</div>
-
-
-    <footer class="footer">
-      <p>© Created by Rudra Patel, Student of GTU</p>
-    </footer>
+    <div class="footer">© Created by Rudra Patel, student of GTU</div>
   </div>
 
   <script src="script.js"></script>
