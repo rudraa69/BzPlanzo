@@ -4,8 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BizPlanner Report</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="output.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script> -->
+  <script defer src="output.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
@@ -14,7 +16,7 @@
 
     <div class="section">
       <h2>🧠 How This Report Helps</h2>
-      <p>This smart report splits your investment across vital business areas such as rent, salaries, marketing, and equipment. It also calculates how much monthly income you’ll need to break even, and gives insight on how your chosen business might perform in your selected city.</p>
+      <p>This smart report splits your investment across key areas — rent, salaries, equipment, marketing etc., and calculates breakeven based on city + business facts.</p>
     </div>
 
     <div class="section summary" id="summarySection"></div>
@@ -26,15 +28,36 @@
 
     <div class="section">
       <h2>📈 Visual Analysis</h2>
-      <canvas id="costChart" height="200"></canvas>
+      <div style="position: relative; height: 300px;">
+        <canvas id="costChart"></canvas>
+      </div>
     </div>
 
-    <div class="footer">
-      <p>© Created by Rudra Patel, Student of GTU</p>
-      <button class="btn" onclick="goHome()">🔁 Try Another Plan</button>
-    </div>
-  </div>
+    <div class="section" id="aiAssistant"></div>
 
-  <script src="output.js"></script>
+    <!-- Editable Rent/Salary Section (Modern UI) -->
+    <div class="section" id="editSection">
+      <h2>🧾 Adjust Costs (Preview)</h2>
+      <div class="edit-fields">
+        <label>
+          <span>Monthly Rent:</span>
+          <input id="editRent" type="number" placeholder="Monthly Rent" min="0">
+        </label>
+        <label>
+          <br><span>Monthly Salaries Total:</span>
+          <input id="editSalary" type="number" placeholder="Monthly Salaries" min="0">
+        </label>
+        <button class="btn-apply-btn" onclick="applyEdits()">Apply Changes</button>
+      </div>
+    </div>
+    <!-- End Editable Section -->
+
+    <div class="section" id="revenueForecast"></div>
+
+<a href="index.html" class="try-again-btn">🔁 Try Another Plan</a>
+<div class="footer">
+  © Created by Rudra Patel, Student of GTU
+</div>
+
 </body>
 </html>
