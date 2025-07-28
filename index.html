@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BizPlanner - Business Budget Tool</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script> <!-- ✅ Link JS here -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -24,18 +25,13 @@
       <div class="form-group">
         <label for="business-type">Business Type</label>
         <select id="business-type" required>
-          <option value="bakery">Bakery</option>
           <option value="cafe">Cafe</option>
+          <option value="bakery">Bakery</option>
+          <option value="realestate">Real Estate Office</option>
+          <option value="medical">Medical Store</option>
           <option value="gym">Gym</option>
           <option value="saloon">Saloon</option>
-          <option value="realestate">Real Estate Office</option>
-          <option value="cloudkitchen">Cloud Kitchen</option>
           <option value="coaching">Coaching Class</option>
-          <option value="medical">Medical Store</option>
-          <option value="clothing">Clothing Store</option>
-          <option value="stationery">Stationery Shop</option>
-          <option value="mobile">Mobile Store</option>
-          <option value="electronics">Electronics Repair</option>
         </select>
       </div>
 
@@ -62,9 +58,7 @@
       <button type="submit" class="btn">Generate Report</button>
     </form>
 
-    <div class="footer">© Created by Rudra Patel, student of GTU</div>
+    <div class="footer">© Created by Rudra Patel, Student of GTU</div>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
