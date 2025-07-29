@@ -1,89 +1,65 @@
-/* output.css for BizPlanner - output page */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BizPlanner - Business Budget Tool</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script> <!-- ✅ Link JS here -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="brand">📈 BizPlanner</div>
+    <div class="section">
+      <h2>🚀 Start Your Plan</h2>
+      <p>Enter your total budget, select a business type, and pick your target city in Gujarat. We'll break down your cost structure and calculate your breakeven point instantly.</p>
+    </div>
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #0f0f0f;
-  color: #fff;
-  overflow-x: hidden;
-}
+    <form id="plannerForm">
+      <div class="form-group">
+        <label for="budget">Your Investment (₹)</label>
+        <input type="number" id="budget" placeholder="e.g. 1000000" required>
+      </div>
 
-.container {
-  width: 100%;
-  max-width: 640px;
-  margin: 3rem auto;
-  padding: 2rem 1.5rem;
-  background: #1a1a1a;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  animation: fadeIn 1s ease-out;
-  box-sizing: border-box;
-}
+      <div class="form-group">
+        <label for="business-type">Business Type</label>
+        <select id="business-type" required>
+          <option value="cafe">Cafe</option>
+          <option value="bakery">Bakery</option>
+          <option value="realestate">Real Estate Office</option>
+          <option value="medical">Medical Store</option>
+          <option value="gym">Gym</option>
+          <option value="saloon">Saloon</option>
+          <option value="coaching">Coaching Class</option>
+        </select>
+      </div>
 
-.brand {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.2rem;
-  color: #f1c40f;
-  text-align: center;
-  margin-bottom: 2rem;
-  animation: glow 2s ease-in-out infinite alternate;
-}
+      <div class="form-group">
+        <label for="city">Select City</label>
+        <select id="city" required>
+          <option value="ahmedabad">Ahmedabad</option>
+          <option value="surat">Surat</option>
+          <option value="vadodara">Vadodara</option>
+          <option value="rajkot">Rajkot</option>
+          <option value="anand">Anand</option>
+          <option value="nadiad">Nadiad</option>
+          <option value="kapadwanj">Kapadwanj</option>
+          <option value="bhavnagar">Bhavnagar</option>
+          <option value="junagadh">Junagadh</option>
+          <option value="mehsana">Mehsana</option>
+          <option value="navsari">Navsari</option>
+          <option value="bharuch">Bharuch</option>
+          <option value="jamnagar">Jamnagar</option>
+          <option value="valsad">Valsad</option>
+        </select>
+      </div>
 
-@keyframes glow {
-  from { text-shadow: 0 0 8px #f1c40f; }
-  to { text-shadow: 0 0 16px #f1c40f; }
-}
+      <button type="submit" class="btn">Generate Report</button>
+    </form>
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.section {
-  margin-bottom: 2rem;
-}
-
-.btn {
-  background: #f1c40f;
-  color: #000;
-  padding: 0.9rem 2rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.btn:hover {
-  background: #d4ac0d;
-}
-
-.footer {
-  margin-top: 2rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #aaa;
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding: 1.5rem 1rem;
-    margin: 2rem auto;
-  }
-
-  .brand {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 1.2rem 0.8rem;
-    margin: 1.5rem auto;
-  }
-
-  .brand {
-    font-size: 1.5rem;
-  }
-}
+    <div class="footer">© Created by Rudra Patel, Student of GTU</div>
+  </div>
+  <script defer src="script.js"></script>
+</body>
+</html>
