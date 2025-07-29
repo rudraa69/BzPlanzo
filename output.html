@@ -1,41 +1,74 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BizPlanner Report</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="output.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="reportContainer">
     <div class="brand">📊 BizPlanner - Report</div>
 
     <div class="section">
       <h2>🧠 How This Report Helps</h2>
-      <p>This smart report splits your investment across vital business areas such as rent, salaries, marketing, and equipment. It also calculates how much monthly income you’ll need to break even, and gives insight on how your chosen business might perform in your selected city.</p>
+      <p>This smart report splits your investment across key areas — rent, salaries, equipment, marketing etc., and calculates breakeven based on city + business facts.</p>
     </div>
 
-    <div class="section summary" id="summarySection"></div>
+    <div class="section summary" id="summarySection">
+        <!-- Summary will be loaded here by JS -->
+    </div>
 
     <div class="section">
       <h2>📦 Cost Breakdown</h2>
-      <div class="breakdown-grid" id="breakdownGrid"></div>
+      <p>This shows where your initial investment of <strong id="totalInvestmentValue"></strong> will likely be allocated.</p>
+      <div id="breakdownGrid">
+          <!-- Breakdown cards will be loaded here by JS -->
+      </div>
     </div>
 
     <div class="section">
-      <h2>📈 Visual Analysis</h2>
-      <canvas id="costChart" height="200"></canvas>
+      <h2>📈 Visual Analysis (Initial Investment)</h2>
+      <div style="position: relative; height: 300px; width:100%; margin-top: 1.5rem;">
+        <canvas id="costChart"></canvas>
+      </div>
+    </div>
+
+    <div class="section" id="aiAssistant">
+        <!-- AI Assistant insight will be loaded here by JS -->
+    </div>
+
+    <!-- Editable Rent/Salary Section -->
+    <div class="adjust-section" id="editSection">
+      <h3>🎛️ Adjust Monthly Costs (Preview)</h3>
+      <div class="input-row">
+        <label for="editRentInput">Monthly Rent (₹):</label>
+        <input id="editRentInput" type="number" placeholder="Monthly Rent" min="0">
+      </div>
+       <div class="input-row">
+        <label for="editSalaryInput">Total Monthly Salaries (₹):</label>
+        <input id="editSalaryInput" type="number" placeholder="Monthly Salaries" min="0">
+      </div>
+      <div class="button-wrapper">
+         <button class="btn-apply" onclick="applyEdits()">Apply Changes & Recalculate</button>
+      </div>
+    </div>
+
+    <div class="section" id="revenueForecast">
+        <!-- Revenue forecast will be loaded here by JS -->
+    </div>
+
+    <div class="button-wrapper">
+        <a href="index.html" class="btn-try-again">🔁 Try Another Plan</a>
     </div>
 
     <div class="footer">
-      <p>© Created by Rudra Patel, Student of GTU</p>
-      <button class="btn" onclick="goHome()">🔁 Try Another Plan</button>
+      © Created by Rudra Patel, Student of GTU
     </div>
   </div>
 
-  <script src="output.js"></script>
+  <script defer src="output.js"></script>
 </body>
 </html>
