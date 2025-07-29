@@ -1,67 +1,108 @@
-/* style.css for BizPlanner - index page */
+/* style.css for BizPlanner - NEW ENHANCED VERSION */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600&display=swap');
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  background: #0f0f0f;
   color: #fff;
+  background: linear-gradient(45deg, #1a1a1a, #0f0f0f, #1c1c1c);
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease-in-out infinite;
   overflow-x: hidden;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .container {
   width: 100%;
   max-width: 640px;
-  margin: 3rem auto;
-  padding: 2rem 1.5rem;
-  background: #1a1a1a;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  animation: fadeIn 1s ease-out;
+  margin: 4rem auto;
+  padding: 2rem 2.5rem;
+  background: rgba(26, 26, 26, 0.8);
+  border: 1px solid #333;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  animation: fadeInDown 1s ease-out;
   box-sizing: border-box;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .brand {
   font-family: 'Orbitron', sans-serif;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   color: #f1c40f;
   text-align: center;
-  margin-bottom: 2rem;
-  animation: glow 2s ease-in-out infinite alternate;
+  margin-bottom: 1.5rem;
+  animation: brandGlow 2s ease-in-out infinite alternate;
 }
 
-@keyframes glow {
-  from { text-shadow: 0 0 8px #f1c40f; }
-  to { text-shadow: 0 0 16px #f1c40f; }
+@keyframes brandGlow {
+  from { text-shadow: 0 0 1px #f1c40f, 0 0 10px #f1c40f; }
+  to { text-shadow: 0 0 12px #f1c40f, 0 0 35px #f1c40f; }
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+.section p {
+    text-align: center;
+    color: #b3b3b3;
+    line-height: 1.6;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.8rem;
+  margin-top: 2rem;
+}
+
+.form-group {
+    animation: fadeInUp 0.5s ease-out both;
+}
+.form-group:nth-child(1) { animation-delay: 0.2s; }
+.form-group:nth-child(2) { animation-delay: 0.3s; }
+.form-group:nth-child(3) { animation-delay: 0.4s; }
+
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .form-group label {
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
   display: block;
   color: #f1c40f;
 }
 
 .form-group input,
 .form-group select {
-  padding: 0.7rem;
+  padding: 0.8rem 1rem;
   border-radius: 8px;
-  border: none;
-  background: #2d2d2d;
+  border: 1px solid #444;
+  background: #252525;
   color: white;
   font-size: 1rem;
   width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #f1c40f;
+  box-shadow: 0 0 1px rgba(241, 196, 15, 0.2);
 }
 
 .btn {
@@ -72,38 +113,30 @@ form {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  transition: all 0.3s ease-out;
+  animation: fadeInUp 0.5s ease-out 0.5s both;
 }
 
 .btn:hover {
-  background: #d4ac0d;
+  background: #ffb700;
+  color: #000;
+  transform: translateY(-3px);
+  box-shadow: 0 2px 20px rgba(255, 224, 101, 0.4);
 }
 
 .footer {
-  margin-top: 2rem;
+  margin-top: 3rem;
   text-align: center;
   font-size: 0.9rem;
-  color: #aaa;
+  color: #888;
 }
 
 @media (max-width: 768px) {
   .container {
-    padding: 1.5rem 1rem;
+    padding: 2rem 1.5rem;
     margin: 2rem auto;
   }
-
-  .brand {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 1.2rem 0.8rem;
-    margin: 1.5rem auto;
-  }
-
-  .brand {
-    font-size: 1.5rem;
-  }
+  .brand { font-size: 2rem; }
 }
