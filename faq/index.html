@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ - BzPlanzo</title>
+<link rel="stylesheet" href="../style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+<div class="brand-logo">
+<a href="../">📊 BzPlanzo</a>
+</div>
+<nav class="nav-links">
+<a href="../">Home</a>
+<a href="../about/">About</a>
+<a href="../vision/">Vision</a>
+<a href="../faq/">FAQ</a>
+<a href="../contact/">Contact</a>
+<a href="../legal/">Legal</a>
+</nav>
+</header>
+<main class="container">
+<h2 class="page-title">Frequently Asked Questions</h2>
+<div class="faq-item">
+<button class="faq-question">How accurate is the data?</button>
+<div class="faq-answer">
+<p>Our data is based on extensive research of public real estate listings, job portals, and economic reports for each city tier. It is intended to be a strong, realistic estimate for planning purposes. However, market prices can change quickly. We strongly recommend using our report as a baseline and then getting current, local quotes for your final business plan.</p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-question">Can I use this report for a bank loan application?</button>
+<div class="faq-answer">
+<p>You can use this report as an excellent starting point and a foundation for your financial projections. However, for a bank loan, you will need to expand on this with a more detailed business plan, including your own local research, supplier quotes, marketing strategy, and revenue projections.</p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-question">Why did the calculator say my budget was too low?</button>
+<div class="faq-answer">
+<p>Our system first allocates money for one year of essential recurring costs: rent and salaries. If your total budget isn't enough to cover these core expenses, there would be no money left for equipment, marketing, or legal fees, making the business unviable from the start. This check is in place to provide a realistic financial picture.</p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-question">Are you planning to add more states or business types?</button>
+<div class="faq-answer">
+<p>Yes, absolutely! Our vision is to expand across all of India and to continuously add more niche business models. We are constantly working on gathering new data. If you have a specific request, please let us know via our contact channels!</p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-question">How does BzPlanzo make money if it's free?</button>
+<div class="faq-answer">
+<p>Our primary goal is to provide a valuable free tool. To support the operational costs of the website (like hosting, development, and data research), we use Google AdSense to display advertisements. This allows us to keep the service free for all users.</p>
+</div>
+</div>
+</main>
+<footer class="footer">
+<div class="footer-links">
+<a href="../about/">About</a>
+<a href="../vision/">Vision</a>
+<a href="../faq/">FAQ</a>
+<a href="../contact/">Contact</a>
+<a href="../legal/">Legal & Privacy</a>
+</div>
+<p>© 2025 BzPlanzo | Created by Rudra, Student of GTU</p>
+</footer>
+<script>
+const questions = document.querySelectorAll('.faq-question');
+questions.forEach(question => {
+question.addEventListener('click', () => {
+const answer = question.nextElementSibling;
+question.classList.toggle('active');
+if (question.classList.contains('active')) {
+answer.style.maxHeight = answer.scrollHeight + 'px';
+} else {
+answer.style.maxHeight = '0px';
+}
+});
+});
+</script>
+<!-- Floating Widget -->
+<div class="floating-contact-widget">
+<a href="https://www.instagram.com/webzplanzo" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" /></svg></a>
+<a href="mailto:webzplanzoo@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg></a>
+</div>
+</body>
+</html>
