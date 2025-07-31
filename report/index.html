@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your BzPlanzo Report</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../output.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="header">
+    <div class="brand-logo">
+      <a href="../">📊 BzPlanzo</a>
+    </div>
+    <nav class="nav-links">
+      <a href="../">Home</a>
+      <a href="../about/">About</a>
+      <a href="../vision/">Vision</a>
+      <a href="../faq/">FAQ</a>
+      <a href="../contact/">Contact</a>
+      <a href="../legal/">Legal</a>
+    </nav>
+  </header>
+  <div class="container" id="reportContainer">
+    <h2 class="page-title">Your Business Report</h2>
+    <div class="section summary" id="summarySection"></div>
+    <div class="section">
+      <h2>📦 Cost Breakdown</h2>
+      <p>This shows where your initial investment of <strong id="totalInvestmentValue"></strong> will likely be allocated.</p>
+      <div id="breakdownGrid"></div>
+    </div>
+    <div class="section">
+      <h2>📈 Visual Analysis (Initial Investment)</h2>
+      <div style="position: relative; height: 300px; width:100%; margin-top: 1.5rem;">
+        <canvas id="costChart"></canvas>
+      </div>
+    </div>
+    <div class="section" id="aiAssistant"></div>
+    <div class="adjust-section" id="editSection">
+       <h3>🎛️ Adjust Monthly Costs (Preview)</h3>
+       <div class="input-row"><label for="editRentInput">Monthly Rent (₹):</label><input id="editRentInput" type="number" placeholder="Monthly Rent" min="0"></div>
+       <div class="input-row"><label for="editSalaryInput">Total Monthly Salaries (₹):</label><input id="editSalaryInput" type="number" placeholder="Monthly Salaries" min="0"></div>
+       <div class="button-wrapper"><button class="btn-apply" onclick="applyEdits()">Apply Changes & Recalculate</button></div>
+    </div>
+    <div class="section" id="revenueForecast"></div>
+    <div class="button-wrapper"><a href="../" class="btn-try-again">🔁 Try Another Plan</a></div>
+  </div>
+  <footer class="footer">
+      <div class="footer-links">
+        <a href="../about/">About</a>
+        <a href="../vision/">Vision</a>
+        <a href="../faq/">FAQ</a>
+        <a href="../contact/">Contact</a>
+        <a href="../legal/">Legal & Privacy</a>
+      </div>
+      <p>© 2025 BzPlanzo | Created by Rudra, Student of GTU</p>
+  </footer>
+  <script defer src="../output.js"></script>
+  <!-- Floating Widget -->
+  <div class="floating-contact-widget">
+    <a href="https://www.instagram.com/webzplanzo" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" /></svg></a>
+    <a href="mailto:webzplanzoo@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg></a>
+  </div>
+</body>
+</html>
