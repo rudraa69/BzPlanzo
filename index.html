@@ -3,72 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BzPlanzo - Business Budget Tool</title>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-G7Q7PY33PD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-G7Q7PY33PD');
-</script>
+  <title>BzPlanzo - Business Cost Calculator for India</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script> <!-- ✅ Link JS here -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <header class="header">
+    <div class="brand-logo">
+      <a href="./">📊 BzPlanzo</a>
+    </div>
+    <nav class="nav-links">
+      <a href="./">Home</a>
+      <a href="about/">About</a>
+      <a href="vision/">Vision</a>
+      <a href="faq/">FAQ</a>
+      <a href="contact/">Contact</a>
+      <a href="legal/">Legal</a>
+    </nav>
+  </header>
   <div class="container">
-    <div class="brand">📈 BzPlanzo</div>
+    <h2 class="page-title">Startup Cost Calculator</h2>
     <div class="section">
-      <h2>🚀 Start Your Plan</h2>
-      <p>Enter your total budget, select a business type, and pick your target city in Gujarat. We'll break down your cost structure and calculate your breakeven point instantly.</p>
+      <p style="text-align: center; margin-top: -1rem; margin-bottom: 2rem;">Select your state, city, business type, and investment to instantly generate a detailed financial breakdown and estimate your breakeven point.</p>
     </div>
 
-    <form id="plannerForm">
-      <div class="form-group">
-        <label for="budget">Your Investment (₹)</label>
-        <input type="number" id="budget" placeholder="e.g. 1000000" required>
-      </div>
-
-      <div class="form-group">
-        <label for="business-type">Business Type</label>
-        <select id="business-type" required>
-          <option value="cafe">Cafe</option>
-          <option value="bakery">Bakery</option>
-          <option value="realestate">Real Estate Office</option>
-          <option value="medical">Medical Store</option>
-          <option value="gym">Gym</option>
-          <option value="saloon">Saloon</option>
-          <option value="coaching">Coaching Class</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="city">Select City</label>
-        <select id="city" required>
-          <option value="ahmedabad">Ahmedabad</option>
-          <option value="surat">Surat</option>
-          <option value="vadodara">Vadodara</option>
-          <option value="rajkot">Rajkot</option>
-          <option value="anand">Anand</option>
-          <option value="nadiad">Nadiad</option>
-          <option value="kapadwanj">Kapadwanj</option>
-          <option value="bhavnagar">Bhavnagar</option>
-          <option value="junagadh">Junagadh</option>
-          <option value="mehsana">Mehsana</option>
-          <option value="navsari">Navsari</option>
-          <option value="bharuch">Bharuch</option>
-          <option value="jamnagar">Jamnagar</option>
-          <option value="valsad">Valsad</option>
-        </select>
-      </div>
-
-      <button type="submit" class="btn">Generate Report</button>
-    </form>
-
-    <div class="footer">© Created by Rudra, Student of GTU</div>
+    <!-- MAIN CALCULATOR FORM -->
+    <div id="calculator">
+      <form id="plannerForm">
+        <!-- Form content remains the same -->
+        <div class="form-group"><label for="state">Select State</label><select id="state" required><option value="">-- Choose a State --</option><option value="gujarat">Gujarat</option><option value="maharashtra">Maharashtra</option><option value="karnataka">Karnataka</option></select></div>
+        <div class="form-group"><label for="city">Select City</label><select id="city" required disabled><option value="">-- Select a State First --</option></select></div>
+        <div class="form-group"><label for="business-type">Business Type</label><select id="business-type" required><option value="cafe">Cafe</option><option value="bakery">Bakery</option><option value="cloudkitchen">Cloud Kitchen</option><option value="boutique">Fashion Boutique</option><option value="digitalagency">Digital Marketing Agency</option><option value="realestate">Real Estate Office</option><option value="medical">Medical Store</option><option value="gym">Gym</option><option value="saloon">Saloon</option><option value="coaching">Coaching Class</option></select></div>
+        <div class="form-group"><label for="budget">Your Total Investment (₹)</label><input type="number" id="budget" placeholder="e.g. 1000000" required></div>
+        <button type="submit" class="btn">Generate Report</button>
+      </form>
+    </div>
   </div>
+
+  <!-- NEW SECTIONS FOR HOMEPAGE -->
+  <div class="container info-section">
+      <h2>How It Works</h2>
+      <div class="how-it-works-steps">
+          <div class="step">
+              <div class="icon">1️⃣</div>
+              <h4>Enter Your Details</h4>
+              <p>Provide your total investment, and select your target city and business type from our comprehensive list.</p>
+          </div>
+          <div class="step">
+              <div class="icon">2️⃣</div>
+              <h4>Get Instant Analysis</h4>
+              <p>Our algorithm processes your data against our database of rent and salary estimates to create a detailed cost breakdown.</p>
+          </div>
+          <div class="step">
+              <div class="icon">3️⃣</div>
+              <h4>Plan with Confidence</h4>
+              <p>Use your personalized report, complete with breakeven analysis, to build a robust business plan and make informed decisions.</p>
+          </div>
+      </div>
+  </div>
+
+  <div class="container info-section">
+    <h2>Powerful Features, Completely Free</h2>
+    <div class="feature-grid">
+        <div class="feature-card"><h4>📍 Multi-State Data</h4><p>Cost estimations for major business hubs across Gujarat, Maharashtra, and Karnataka, with more states coming soon.</p></div>
+        <div class="feature-card"><h4>📊 Detailed Breakdown</h4><p>See exactly where your investment goes, from yearly rent and salaries to one-time equipment and marketing costs.</p></div>
+        <div class="feature-card"><h4>🎯 Breakeven Analysis</h4><p>Understand your path to profitability with a clear estimate of how many months it will take to recoup your investment.</p></div>
+        <div class="feature-card"><h4>🤖 AI Assistant</h4><p>Get a quick, insightful summary of your plan's risk profile based on standard business metrics.</p></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="about/">About</a>
+      <a href="vision/">Vision</a>
+      <a href="faq/">FAQ</a>
+      <a href="contact/">Contact</a>
+      <a href="legal/">Legal & Privacy</a>
+    </div>
+    <p>© 2025 BzPlanzo | Created by Rudra, Student of GTU</p>
+  </footer>
   <script defer src="script.js"></script>
+  <!-- Floating Widget -->
+  <div class="floating-contact-widget">
+    <a href="https://www.instagram.com/webzplanzo" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" /></svg></a>
+    <a href="mailto:webzplanzoo@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg></a>
+  </div>
 </body>
 </html>
