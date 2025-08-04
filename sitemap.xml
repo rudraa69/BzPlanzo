@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.bzplanzo.shop/</loc>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://www.bzplanzo.shop/about/</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.bzplanzo.shop/vision/</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.bzplanzo.shop/faq/</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.bzplanzo.shop/contact/</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.bzplanzo.shop/legal/</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.bzplanzo.shop/report/</loc>
+  </url>
+</urlset>
